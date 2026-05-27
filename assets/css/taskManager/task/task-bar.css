@@ -1,0 +1,54 @@
+.task {
+  padding: 32px;
+}
+
+.task-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.task-amount {
+  color: #111827;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.task-amount span {
+  font-size: .9rem;
+  color: #6b7280;
+}
+
+.task-bar-filter label {
+  font-size: .9rem;
+  margin-right: 8px;
+  color: #6b7280;
+}
+
+.task-bar-filter select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background-image: url('/assets/img/icon/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+
+  padding: 8px 30px 8px 12px;
+  border-radius: 8px;
+
+  font-size: .9rem;
+  transition: 0.3s;
+  border-color: #d1d5db;
+  cursor: pointer;
+}
+
+.task-bar-filter select:hover {
+  border-color: #6b7280;
+}
+
+.task-bar-filter select:focus {
+  outline: none;
+  border-color: #22c55e;
+}

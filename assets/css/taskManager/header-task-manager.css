@@ -1,0 +1,40 @@
+/* Principal */
+
+body {
+  background-color: #f5f7fb;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-manager {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 30px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+              0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: 16px;
+}
+
+
+/* Header-task-manager */
+
+.header-task-manager {
+  text-align: center;
+  padding: 40px 32px;
+}
+
+.task-title {
+  color: #111827;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.task-content {
+  color: #6b7280;
+  font-size: 1.2rem;
+  font-weight: 400;
+}

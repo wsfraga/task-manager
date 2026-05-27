@@ -1,0 +1,20 @@
+.task-footer {
+  padding: 20px;
+  background-color: #f5f7fb;
+  border-radius: 0px 0px 16px 16px;
+  font-weight: 400;
+}
+
+.task-list-step {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.task-list-completed {
+  color: #22c55e;
+}
+
+.task-list-pending {
+  color: #f97316;
+}

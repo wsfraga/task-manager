@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <section class="task-manager">
+
+    <div class="header-task-manager">
+      <h1 class="task-title">Task Manager</h1>
+      <p class="task-content">Organize suas tarefas e seja mais produtivo</p>
+    </div>
+
+    <div class="task-new">
+      <input type="text" id="task" placeholder="Digite uma tarefa...">
+
+      <button class="task-add">
+        <img src="assets/img/icon/add.svg">
+        Adicionar
+      </button>
+    </div>
+
+    <div class="task">
+
+      <div class="task-bar">
+        <h2 class="task-amount">
+          Suas tarefas
+          <span>( 0 )</span>
+        </h2>
+
+        <div class="task-bar-filter">
+          <label for="task-filter">Filtrar:</label>
+
+          <select name="task-step" id="task-filter">
+            <option value="all">Todas</option>
+            <option value="completed">Concluídas</option>
+            <option value="pending">Pendentes</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="task-container">
+        <ul class="task-list">
+          <li class="task-card">
+            <div class="task-card-step">
+              <button class="task-card-btn">
+                <i class="task-card-check"></i>
+              </button>
+            </div>
+
+            <div class="task-card-item">
+              <h3 class="task-card-name">Estudar JavaScript assíncrono</h3>
+              <span class="task-card-info">
+                Criada em 26/05/2026 às 13:50
+              </span>
+            </div>
+
+            <div class="task-card-change">
+
+              <button class="task-card-edit">
+              </button>
+
+              <button class="task-card-delete">
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="task-footer">
+        <ul class="task-list-step">
+          <li class="task-list-total">
+            <p>Total:
+              <span>0</span>
+            </p>
+          </li>
+          <li class="task-list-completed">
+            <p>Concluido:
+              <span>0</span>
+            </p>
+          </li>
+          <li class="task-list-pending">
+            <p>Pendente:
+              <span>0</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
