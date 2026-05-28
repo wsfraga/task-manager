@@ -23,9 +23,9 @@
     </div>
 
     <div class="task-new">
-      <input type="text" id="task" placeholder="Digite uma tarefa...">
+      <input type="text" id="task" placeholder="Digite uma tarefa..." data-task="task-new">
 
-      <button class="task-add">
+      <button class="task-add" data-task="task-add">
         <img src="assets/img/icon/add.svg">
         Adicionar
       </button>
@@ -51,34 +51,10 @@
       </div>
 
       <div class="task-container">
-        <ul class="task-list">
-          <li class="task-card">
-            <div class="task-card-step">
-              <button class="task-card-btn">
-                <i class="task-card-check"></i>
-              </button>
-            </div>
-
-            <div class="task-card-item">
-              <h3 class="task-card-name">Estudar JavaScript assíncrono</h3>
-              <span class="task-card-info">
-                Criada em 26/05/2026 às 13:50
-              </span>
-            </div>
-
-            <div class="task-card-change">
-
-              <button class="task-card-edit">
-              </button>
-
-              <button class="task-card-delete">
-              </button>
-            </div>
-          </li>
-        </ul>
+        <ul class="task-list" data-task="task-list"></ul>
       </div>
     </div>
-    
+
     <div class="task-footer">
         <ul class="task-list-step">
           <li class="task-list-total">
