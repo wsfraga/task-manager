@@ -42,6 +42,12 @@
   transition: 0.3s;
   border-color: #d1d5db;
   cursor: pointer;
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease,
+    transform .15s ease,
+    background-color .2s ease;
 }
 
 .task-bar-filter select:hover {
@@ -51,4 +57,9 @@
 .task-bar-filter select:focus {
   outline: none;
   border-color: #22c55e;
+  background-color: #fcfffd;
+
+  box-shadow: 0 0 0 4px rgb(34 197 94 / 0.12);
+
+  transform: scale(1.01);
 }

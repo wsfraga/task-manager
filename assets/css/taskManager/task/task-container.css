@@ -6,7 +6,25 @@
   align-items: center;
   margin-bottom: 20px;
   
-  transition: transform .3s ease, box-shadow .3s ease;
+  transition: transform .3s ease,
+  box-shadow .3s ease,
+  background-color .3s ease,
+  border-color .3s ease,
+  opacity .3s ease;
+
+  animation: taskFadeIn .8s ease;
+}
+
+@keyframes taskFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .task-card:hover {
@@ -25,6 +43,11 @@
 
   cursor: pointer;
   transition: border-color .3s;
+
+  transition:
+  transform .2s ease,
+  border-color .3s ease,
+  background-color .3s ease;
 }
 
 .task-card-btn:hover {
@@ -66,6 +89,10 @@
   background-image: url('/assets/img/icon/delete.svg');
   background-position: center;
   background-repeat: no-repeat;
+
+  transition:
+  transform .2s ease,
+  background-color .2s ease;
 }
 
 .task-card-delete:hover {
@@ -73,6 +100,12 @@
   background-image: url('/assets/img/icon/delete-hover.svg');
   background-repeat: no-repeat;
   background-position: center;
+
+  transform: translateY(-2px);
+}
+
+.task-card-delete:active {
+  transform: scale(0.9);
 }
 
 .task-card-edit {
@@ -95,6 +128,10 @@
 }
 
 /* Completed */
+
+.task-card-btn:active {
+  transform: scale(0.88);
+}
 
 .task-card.completed {
   background-color: #f0fdf4;
@@ -119,4 +156,5 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px;
+  transform: scale(1.05);
 }

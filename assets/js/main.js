@@ -3,11 +3,14 @@ import {
   loadTasks 
 } from "./storege.js";
 
-import { renderTask } from "./ui.js";
+import { 
+  renderTask,
+  updateTaskStats
+ } from "./ui.js";
 
 import { createTask, 
   toggleTaskCompleted, 
-  handleDeleteTask
+  handleDeleteTask,
 } from "./tasks.js";
 
 
@@ -43,6 +46,8 @@ function handleAddTask() {
 
   const task = createTask(taskName, tasks);
   renderTask(task, taskList);
+
+  updateTaskStats(tasks);
   saveTasks(tasks);
 
   inputText.value = '';
@@ -51,12 +56,16 @@ function handleAddTask() {
 
 // ----------------
 
-taskList.addEventListener('click', () => {
+taskList.addEventListener('click', (event) => {
   toggleTaskCompleted(event, tasks);
+  updateTaskStats(tasks);
   saveTasks(tasks);
 });
 
-taskList.addEventListener('click', () => {
+taskList.addEventListener('click', (event) => {
   handleDeleteTask(event, tasks);
+  updateTaskStats(tasks);
   saveTasks(tasks);
 });
+
+updateTaskStats(tasks);
