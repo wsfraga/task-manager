@@ -18,3 +18,9 @@
 .task-list-pending {
   color: #f97316;
 }
+
+@media (max-width: 768px) {
+  .task-footer {
+    padding: 20px 22px;
+  }
+}

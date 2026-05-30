@@ -31,7 +31,7 @@
   -moz-appearance: none;
   appearance: none;
 
-  background-image: url('/assets/img/icon/arrow-down.svg');
+  background-image: url('../../../img/icon/arrow-down.svg');
   background-repeat: no-repeat;
   background-position: right 10px center;
 
@@ -62,4 +62,28 @@
   box-shadow: 0 0 0 4px rgb(34 197 94 / 0.12);
 
   transform: scale(1.01);
+}
+
+
+@media (max-width: 768px) {
+  .task {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-amount span{
+    font-size: 0.8rem;
+  }
+  .task-bar-filter select {
+      padding: 8px 4px;
+      font-size: 0.8rem;
+      text-align: center;
+      background-image: none;
+  }
+
+  .task-bar-filter label {
+    font-size: .8rem;
+    margin-right: 4px;
+  }
 }

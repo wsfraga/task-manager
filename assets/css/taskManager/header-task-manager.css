@@ -13,7 +13,7 @@ body {
   width: 100%;
   max-width: 700px;
   height: auto;
-  margin-top: 30px;
+  margin: 30px 50px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
               0 4px 6px -4px rgb(0 0 0 / 0.1);
   border-radius: 16px;
@@ -38,4 +38,22 @@ body {
   color: #6b7280;
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .task-manager {
+    margin: 30px 20px;
+  }
+  .header-task-manager {
+    padding: 36px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-title {
+    font-size: 2.1rem;
+  }
+  .task-content {
+    font-size: 1rem;
+  }
 }

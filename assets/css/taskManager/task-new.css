@@ -85,3 +85,17 @@
 .task-add:hover img {
   transform: rotate(90deg);
 }
+
+@media (max-width: 768px) {
+  .task-new {
+    padding: 0px 22px 36px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-add {
+    font-size: 0px;
+    gap: 0px;
+    padding: 11px;
+  }
+}
