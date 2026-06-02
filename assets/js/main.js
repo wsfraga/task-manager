@@ -8,9 +8,12 @@ import {
   updateTaskStats
  } from "./ui.js";
 
-import { createTask, 
+import { 
+  createTask, 
   toggleTaskCompleted, 
   handleDeleteTask,
+  filterTasks,
+  handleEditTask,
 } from "./tasks.js";
 
 
@@ -20,6 +23,7 @@ const btnTaskAdd = document.querySelector('[data-task="task-add"]');
 
 const taskList = document.querySelector('[data-task="task-list"]');
 
+const taskFilter = document.querySelector('#task-filter');
 
 let tasks = loadTasks();
 
@@ -69,3 +73,18 @@ taskList.addEventListener('click', (event) => {
 });
 
 updateTaskStats(tasks);
+
+taskFilter.addEventListener('change', (event) => {
+  const filterType = event.target.value;
+  const filteredTasks = filterTasks(tasks, filterType);
+
+  taskList.innerHTML = '';
+  
+  filteredTasks.forEach((task) => {
+    renderTask(task, taskList)
+  })
+});
+
+taskList.addEventListener('click', (event) => {
+  handleEditTask(event, tasks);
+});

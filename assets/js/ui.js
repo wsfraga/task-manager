@@ -8,19 +8,24 @@ export function renderTask(task, taskList) {
 
   newLi.innerHTML = `
   <div class="task-card-step"> 
-  <button class="task-card-btn" data-task="state">
+    <button class="task-card-btn" data-task="state">
      <i class="task-card-check"></i> 
-     </button> 
-     </div> 
-     <div class="task-card-item"> 
-     <h3 class="task-card-name">${task.name}</h3>
-      <span class="task-card-info"> Criada em ${task.dateNow} às ${task.dateHour} </span>
-       </div> 
-       <div class="task-card-change"> 
-       <button class="task-card-edit"> </button> 
-       <button class="task-card-delete" data-task="task-delete"> 
-        </button> 
-        </div>`
+    </button> 
+  </div> 
+  <div class="task-card-item"> 
+    <h3 class="task-card-name">${task.name}</h3>
+    <span class="task-card-info">
+       ${
+        task.completed
+        ? `Concluida`
+        : `Criada em ${task.dateNow} às ${task.dateHour}`
+       }
+     </span>
+  </div> 
+  <div class="task-card-change"> 
+    <button class="task-card-edit" data-task="task-edit"></button> 
+    <button class="task-card-delete" data-task="task-delete"></button> 
+  </div>`
 
   taskList.appendChild(newLi);
 
